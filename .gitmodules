@@ -1,0 +1,24 @@
+[submodule "config/www/lovelace-github-entity-row"]
+    path = config/www/lovelace-github-entity-row
+    url = https://github.com/benct/lovelace-github-entity-row
+[submodule "config/www/lovelace-multiple-entity-row"]
+    path = config/www/lovelace-multiple-entity-row
+    url = https://github.com/benct/lovelace-multiple-entity-row
+[submodule "config/www/rgb-light-card"]
+    path = config/www/rgb-light-card
+    url = https://github.com/bokub/rgb-light-card
+[submodule "config/www/swipe-card"]
+    path = config/www/swipe-card
+    url = https://github.com/bramkragten/swipe-card
+[submodule "config/www/lovelace-battery-entity"]
+    path = config/www/lovelace-battery-entity
+    url = https://github.com/cbulock/lovelace-battery-entity
+[submodule "config/www/lovelace-card-mod"]
+    path = config/www/lovelace-card-mod
+    url = https://github.com/thomasloven/lovelace-card-mod
+[submodule "config/www/lovelace-layout-card"]
+    path = config/www/lovelace-layout-card
+    url = https://github.com/thomasloven/lovelace-layout-card
+[submodule "config/www/lovelace-slider-entity-row"]
+    path = config/www/lovelace-slider-entity-row
+    url = https://github.com/thomasloven/lovelace-slider-entity-row

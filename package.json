@@ -1,0 +1,26 @@
+{
+  "name": "home-assistant",
+  "description": "Configuration files for my Home-Assistant instance.",
+  "license": "MIT",
+  "author": {
+    "name": "Pascal Iske",
+    "email": "info@pascaliske.dev",
+    "url": "https://pascaliske.dev"
+  },
+  "repository": {
+    "url": "https://github.com/pascaliske/home-assistant.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/pascaliske/home-assistant/issues"
+  },
+  "private": true,
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "husky": "^8.0.1"
+  }
+}

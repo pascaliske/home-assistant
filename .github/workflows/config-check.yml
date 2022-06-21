@@ -1,0 +1,30 @@
+name: Config Check
+on: push
+
+jobs:
+  check:
+    name: Config Check
+    runs-on: ubuntu-latest
+    steps:
+      # checkout
+      - uses: actions/checkout@v3
+
+      # prepare
+      - name: Prepare configuration files
+        run: |
+          sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/*.yaml
+          sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/**/*.yaml
+          mv config/integrations/homekit.yaml{,.disabled}
+          mv config/integrations/http.yaml{,.disabled}
+          mv config/integrations/withings.yaml{,.disabled}
+          mv config/automations/battery-check.yaml{,.disabled}
+          mv config/automations/bedroom-mini-switch.yaml{,.disabled}
+          mv config/automations/love-mini-switch.yaml{,.disabled}
+          git ls-files -m
+
+      # check prometheus config
+      - uses: addnab/docker-run-action@v3
+        with:
+          image: homeassistant/home-assistant:stable
+          options: -v ${{ github.workspace }}/config:/config
+          run: hass --script check_config --config /config
