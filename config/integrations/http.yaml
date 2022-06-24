@@ -3,5 +3,3 @@ http:
   trusted_proxies:
     - !secret network_cluster
   use_x_forwarded_for: true
-  ssl_certificate: /config/fullchain.pem
-  ssl_key: /config/privkey.pem
