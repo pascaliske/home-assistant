@@ -1,0 +1,21 @@
+# ignore all dynamically generated files
+config/*
+
+# track statically created files
+!config/configuration.yaml
+!config/customize.yaml
+!config/ui-lovelace.yaml
+
+# track statically created folders
+!config/automations
+!config/groups
+!config/helpers
+!config/integrations
+!config/scenes
+!config/scripts
+!config/sensors
+!config/switches
+!config/templates
+!config/themes
+!config/views
+!config/www
