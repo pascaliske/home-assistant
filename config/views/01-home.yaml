@@ -319,6 +319,16 @@ cards:
                       name: Humidity
                     - entity: sensor.office_climate_lumi_power
                       name: Battery
+                - type: custom:multiple-entity-row
+                  entity: binary_sensor.office_motion_sensor_zone
+                  name: Motion
+                  secondary_info: last-changed
+                  show_state: false
+                  entities:
+                    - entity: binary_sensor.office_motion_sensor_zone
+                      name: Motion
+                    - entity: sensor.office_motion_sensor_power
+                      name: Battery
                 - type: custom:text-divider-row
                   entity: sensor.time
                   text: Lights
