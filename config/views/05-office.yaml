@@ -13,7 +13,28 @@ cards:
         max_width: 1000
       cards:
         - type: vertical-stack
-          cards: []
+          cards:
+            - type: entities
+              title: Climate
+              state_color: false
+              show_header_toggle: false
+              entities:
+                - entity: sensor.office_climate_lumi_temperature
+                  secondary_info: last-changed
+                  name: Temperature
+                - entity: sensor.office_climate_lumi_humidity
+                  secondary_info: last-changed
+                  name: Humidity
+                - entity: sensor.office_climate_lumi_pressure
+                  secondary_info: last-changed
+                  name: Pressure
+                - entity: sensor.office_climate_lumi_power
+                  secondary_info: last-changed
+                  name: Battery
+              footer:
+                type: graph
+                entity: sensor.office_climate_lumi_temperature
+                hours_to_show: 48
         - type: vertical-stack
           cards:
             - type: entities
