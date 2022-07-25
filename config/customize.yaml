@@ -27,6 +27,8 @@ light.bedroom_closet:
 # childrens room
 switch.love:
   icon: mdi:string-lights
+switch.babyphone:
+  icon: mdi:webcam
 
 # office
 sensor.canon_mx470_series:

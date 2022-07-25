@@ -44,6 +44,13 @@ cards:
               entities:
                 - entity: switch.love
                   secondary_info: last-changed
+            - type: entities
+              title: Switches
+              state_color: true
+              show_header_toggle: true
+              entities:
+                - entity: switch.babyphone
+                  secondary_info: last-changed
     card_mod:
       style: |
         ha-card {
