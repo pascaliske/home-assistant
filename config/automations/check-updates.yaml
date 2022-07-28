@@ -1,7 +1,7 @@
 alias: Check Home Assistant Version once a day
 trigger:
   platform: time
-  at: '10:00:00'
+  at: '08:00:00'
 condition:
   condition: template
   value_template: >
@@ -18,10 +18,10 @@ action:
             text:
               type: mrkdwn
               text: >
-                :tada: New version of Home Assistant available: <https://www.home-assistant.io/blog/categories/release-notes/|{{ states('sensor.latest_version') }}>
+                :tada: New version of Home Assistant available: <https://github.com/home-assistant/core/releases/tag/{{ states('sensor.latest_version') }}|{{ states('sensor.latest_version') }}> | <https://www.home-assistant.io/blog/categories/release-notes/|Releases>
   - service: persistent_notification.create
     data_template:
       title: Update available
       notification_id: "Update available"
       message: >
-        New version of Home Assistant available: [{{ states('sensor.latest_version') }}](https://www.home-assistant.io/blog/categories/release-notes/)
+        New version of Home Assistant available: [{{ states('sensor.latest_version') }}](https://github.com/home-assistant/core/releases/tag/{{ states('sensor.latest_version') }}) | [Releases](https://www.home-assistant.io/blog/categories/release-notes/)
