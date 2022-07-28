@@ -203,6 +203,56 @@ cards:
                         action: url
                         url_path: https://github.com/pascaliske/helm-charts/pulls
                 - type: custom:multiple-entity-row
+                  entity: sensor.pascaliske_home_assistant_stars
+                  name: pascaliske/home-assistant
+                  state_header: Stars
+                  unit: false
+                  icon: mdi:github
+                  secondary_info:
+                    entity: sensor.pascaliske_home_assistant_latest_commit
+                    name: false
+                  tap_action:
+                    action: url
+                    url_path: https://github.com/pascaliske/home-assistant
+                  entities:
+                    - entity: sensor.pascaliske_home_assistant_issues
+                      name: Issues
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/home-assistant/issues
+                    - entity: sensor.pascaliske_home_assistant_pull_requests
+                      name: PRs
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/home-assistant/pulls
+                - type: custom:multiple-entity-row
+                  entity: sensor.pascaliske_magicmirror_stars
+                  name: pascaliske/magicmirror
+                  state_header: Stars
+                  unit: false
+                  icon: mdi:github
+                  secondary_info:
+                    entity: sensor.pascaliske_magicmirror_latest_commit
+                    name: false
+                  tap_action:
+                    action: url
+                    url_path: https://github.com/pascaliske/magicmirror
+                  entities:
+                    - entity: sensor.pascaliske_magicmirror_issues
+                      name: Issues
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/magicmirror/issues
+                    - entity: sensor.pascaliske_magicmirror_pull_requests
+                      name: PRs
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/magicmirror/pulls
+                - type: custom:multiple-entity-row
                   entity: sensor.pascaliske_docker_alpine_curl_jq_stars
                   name: pascaliske/docker-alpine-curl-jq
                   state_header: Stars
@@ -227,6 +277,31 @@ cards:
                       tap_action:
                         action: url
                         url_path: https://github.com/pascaliske/docker-alpine-curl-jq/pulls
+                - type: custom:multiple-entity-row
+                  entity: sensor.pascaliske_docker_alpine_kubectl_stars
+                  name: pascaliske/docker-alpine-kubectl
+                  state_header: Stars
+                  unit: false
+                  icon: mdi:github
+                  secondary_info:
+                    entity: sensor.pascaliske_docker_alpine_kubectl_latest_commit
+                    name: false
+                  tap_action:
+                    action: url
+                    url_path: https://github.com/pascaliske/docker-alpine-kubectl
+                  entities:
+                    - entity: sensor.pascaliske_docker_alpine_kubectl_issues
+                      name: Issues
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/docker-alpine-kubectl/issues
+                    - entity: sensor.pascaliske_docker_alpine_kubectl_pull_requests
+                      name: PRs
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/docker-alpine-kubectl/pulls
                 - type: custom:multiple-entity-row
                   entity: sensor.pascaliske_docker_autorestic_stars
                   name: pascaliske/docker-autorestic
@@ -253,6 +328,56 @@ cards:
                         action: url
                         url_path: https://github.com/pascaliske/docker-autorestic/pulls
                 - type: custom:multiple-entity-row
+                  entity: sensor.pascaliske_docker_cloudflare_dyndns_stars
+                  name: pascaliske/docker-cloudflare-dyndns
+                  state_header: Stars
+                  unit: false
+                  icon: mdi:github
+                  secondary_info:
+                    entity: sensor.pascaliske_docker_cloudflare_dyndns_latest_commit
+                    name: false
+                  tap_action:
+                    action: url
+                    url_path: https://github.com/pascaliske/docker-cloudflare-dyndns
+                  entities:
+                    - entity: sensor.pascaliske_docker_cloudflare_dyndns_issues
+                      name: Issues
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/docker-cloudflare-dyndns/issues
+                    - entity: sensor.pascaliske_docker_cloudflare_dyndns_pull_requests
+                      name: PRs
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/docker-cloudflare-dyndns/pulls
+                - type: custom:multiple-entity-row
+                  entity: sensor.pascaliske_docker_digitalocean_dyndns_stars
+                  name: pascaliske/docker-digitalocean-dyndns
+                  state_header: Stars
+                  unit: false
+                  icon: mdi:github
+                  secondary_info:
+                    entity: sensor.pascaliske_docker_digitalocean_dyndns_latest_commit
+                    name: false
+                  tap_action:
+                    action: url
+                    url_path: https://github.com/pascaliske/docker-digitalocean-dyndns
+                  entities:
+                    - entity: sensor.pascaliske_docker_digitalocean_dyndns_issues
+                      name: Issues
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/docker-digitalocean-dyndns/issues
+                    - entity: sensor.pascaliske_docker_digitalocean_dyndns_pull_requests
+                      name: PRs
+                      unit: false
+                      tap_action:
+                        action: url
+                        url_path: https://github.com/pascaliske/docker-digitalocean-dyndns/pulls
+                - type: custom:multiple-entity-row
                   entity: sensor.pascaliske_docker_traefik_errors_stars
                   name: pascaliske/docker-traefik-errors
                   state_header: Stars
@@ -277,25 +402,8 @@ cards:
                       tap_action:
                         action: url
                         url_path: https://github.com/pascaliske/docker-traefik-errors/pulls
-            - type: entity-filter
-              state_filter:
-                - operator: '!='
-                  value: 'unavailable'
-              card:
-                type: entities
-                title: GitLab
-                show_header_toggle: false
-              entities:
-                - entity: sensor.time
-                  type: button
-                  name: Admin Dashboard
-                  icon: mdi:cog
-                  action_name: Open
-                  tap_action:
-                    action: url
-                    url_path: !secret gitlab_admin_url
             - type: entities
-              title: Pipelines
+              title: GitLab
               show_header_toggle: false
               entities:
                 - entity: sensor.jh_of_app
@@ -411,37 +519,6 @@ cards:
                       name: false
                       hide_unavailable: true
                       hide_if: 'off'
-            - type: entities
-              title: Wake Devices
-              show_header_toggle: false
-              entities:
-                - type: button
-                  name: Synology NAS
-                  action_name: Wake
-                  show_state: false
-                  tap_action:
-                    action: call-service
-                    service: wake_on_lan.send_magic_packet
-                    service_data:
-                      mac: !secret mac_synology_nas
-                - type: button
-                  name: FFMMBP-207
-                  action_name: Wake
-                  show_state: false
-                  tap_action:
-                    action: call-service
-                    service: wake_on_lan.send_magic_packet
-                    service_data:
-                      mac: !secret mac_ffmmbp207
-                - type: button
-                  name: PS4-PI
-                  action_name: Wake
-                  show_state: false
-                  tap_action:
-                    action: call-service
-                    service: media_player.turn_on
-                    service_data:
-                      entity_id: media_player.ps4_pi
     card_mod:
       style: |
         ha-card {
