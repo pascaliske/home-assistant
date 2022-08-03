@@ -3,7 +3,7 @@ prometheus:
   filter:
     include_entity_globs:
       - sensor.cert_*
-      - sensor.fritzbox_*
+      - sensor.fritz_box_*
       - sensor.tankerkoenig_*
       - sensor.withings_weight_*
       - sensor.*_battery_state
