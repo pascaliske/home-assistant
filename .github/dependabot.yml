@@ -23,3 +23,14 @@ updates:
       - pascaliske
     labels:
       - dependencies
+  - package-ecosystem: gitsubmodule
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: chore
+      include: scope
+    assignees:
+      - pascaliske
+    labels:
+      - dependencies
