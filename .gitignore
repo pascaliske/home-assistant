@@ -19,3 +19,7 @@ config/*
 !config/themes
 !config/views
 !config/www
+
+# misc
+.task
+node_modules
