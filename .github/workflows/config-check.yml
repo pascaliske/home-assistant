@@ -9,17 +9,12 @@ jobs:
       # checkout
       - uses: actions/checkout@v3
 
+      # setup taskfile
+      - uses: arduino/setup-task@v1
+
       # prepare files
       - name: Prepare configuration files
-        run: |
-          sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/*.yaml
-          sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/**/*.yaml
-          mv config/integrations/homekit.yaml{,.disabled}
-          mv config/integrations/http.yaml{,.disabled}
-          mv config/automations/battery-check.yaml{,.disabled}
-          mv config/automations/bedroom-mini-switch.yaml{,.disabled}
-          mv config/automations/love-mini-switch.yaml{,.disabled}
-          git ls-files -m
+        run: task prepare diff
 
       # check configuration
       - uses: addnab/docker-run-action@v3

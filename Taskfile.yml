@@ -1,0 +1,22 @@
+version: '3'
+
+tasks:
+  # list modified files
+  diff: git ls-files --modified
+
+  # prepare configuration files
+  prepare:
+    cmds:
+      - sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/*.yaml
+      - sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/**/*.yaml
+      - mv config/integrations/homekit.yaml{,.disabled}
+      - mv config/integrations/http.yaml{,.disabled}
+      - mv config/automations/battery-check.yaml{,.disabled}
+      - mv config/automations/bedroom-mini-switch.yaml{,.disabled}
+      - mv config/automations/love-mini-switch.yaml{,.disabled}
+    status:
+      - test -f config/integrations/homekit.yaml.disabled
+      - test -f config/integrations/http.yaml.disabled
+      - test -f config/automations/battery-check.yaml.disabled
+      - test -f config/automations/bedroom-mini-switch.yaml.disabled
+      - test -f config/automations/love-mini-switch.yaml.disabled
