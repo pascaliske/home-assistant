@@ -16,15 +16,11 @@
   },
   "private": true,
   "scripts": {
-    "prepare": "husky install",
-    "version": "bump --yes package.json",
-    "changelog": "standard-changelog"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@rstacruz/bump-cli": "^2.0.1",
-    "husky": "^8.0.1",
-    "standard-changelog": "^2.0.27"
+    "husky": "^8.0.1"
   }
 }
