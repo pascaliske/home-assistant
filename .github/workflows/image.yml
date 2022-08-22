@@ -62,7 +62,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            SYNC_REPO=${{ github.repository }}
+            SYNC_REPO=https://github.com/${{ github.repository }}
             SYNC_BRANCH=${{ github.ref }}
 
       # output image digest
