@@ -7,7 +7,7 @@ SYNC_DIR_PATH="${GIT_SYNC_ROOT:-/tmp}/${GIT_SYNC_DEST}/config"
 # ensure directories exist
 mkdir -p "${SYNC_DIR_PATH}" /config
 
-# one-time sync for connection
+# one-time sync required for initial connection
 /sbin/git-sync --one-time
 
 # connect sync directory
