@@ -15,7 +15,7 @@ cards:
         - type: vertical-stack
           cards:
             - type: entities
-              title: Private Cluster
+              title: Cluster
               show_header_toggle: false
               entities:
                 - entity: sensor.cert_expiry_iske_cloud
@@ -28,8 +28,6 @@ cards:
                   name: grafana.iske.cloud
                 - entity: sensor.cert_expiry_homeassistant_iske_cloud
                   name: homeassistant.iske.cloud
-                - entity: sensor.cert_expiry_keel_iske_cloud
-                  name: keel.iske.cloud
                 - entity: sensor.cert_expiry_prometheus_iske_cloud
                   name: prometheus.iske.cloud
                 - entity: sensor.cert_expiry_status_iske_cloud
@@ -40,18 +38,23 @@ cards:
                   name: unifi.iske.cloud
                 - entity: sensor.cert_expiry_vault_iske_cloud
                   name: vault.iske.cloud
-        - type: vertical-stack
-          cards:
-            - type: entities
-              title: Public Cluster
-              show_header_toggle: false
-              entities:
-                - entity: sensor.cert_expiry_pascaliske_dev
-                  name: pascaliske.dev
+                - type: custom:text-divider-row
+                  entity: sensor.time
+                  text: Public
+                  card_mod:
+                    style: |
+                      h2.text-divider {
+                        margin: 0;
+                        font-weight: normal;
+                        letter-spacing: 0.5px;
+                        opacity: .5;
+                      }
+
+                      h2.text-divider span {
+                        padding: 10px 1em;
+                      }
                 - entity: sensor.cert_expiry_auth_pascaliske_dev
                   name: auth.pascaliske.dev
-                - entity: sensor.cert_expiry_charts_pascaliske_dev
-                  name: charts.pascaliske.dev
                 - entity: sensor.cert_expiry_code_pascaliske_dev
                   name: code.pascaliske.dev
                 - entity: sensor.cert_expiry_docs_pascaliske_dev
@@ -60,23 +63,23 @@ cards:
                   name: git.pascaliske.dev
                 - entity: sensor.cert_expiry_go_pascaliske_dev
                   name: go.pascaliske.dev
-                - entity: sensor.cert_expiry_keel_pascaliske_dev
-                  name: keel.pascaliske.dev
                 - entity: sensor.cert_expiry_links_pascaliske_dev
                   name: links.pascaliske.dev
                 - entity: sensor.cert_expiry_registry_pascaliske_dev
                   name: registry.pascaliske.dev
-                # - entity: sensor.cert_expiry_time_pascaliske_dev
-                #   name: time.pascaliske.dev
-                - entity: sensor.cert_expiry_traefik_pascaliske_dev
-                  name: traefik.pascaliske.dev
-                # - entity: sensor.cert_expiry_travel_pascaliske_dev
-                #   name: travel.pascaliske.dev
         - type: vertical-stack
           cards:
             - type: entities
               title: Miscellaneous
               show_header_toggle: false
               entities:
+                - entity: sensor.cert_expiry_pascaliske_dev
+                  name: pascaliske.dev
+                - entity: sensor.cert_expiry_charts_pascaliske_dev
+                  name: charts.pascaliske.dev
                 - entity: sensor.cert_expiry_tonies_me
                   name: tonies.me
+                # - entity: sensor.cert_expiry_time_pascaliske_dev
+                #   name: time.pascaliske.dev
+                # - entity: sensor.cert_expiry_travel_pascaliske_dev
+                #   name: travel.pascaliske.dev
