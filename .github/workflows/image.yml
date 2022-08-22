@@ -6,6 +6,7 @@ on:
     paths:
       - Dockerfile
       - docker-entrypoint.sh
+      - .github/workflows/image.yml
   pull_request:
     branches:
       - master
@@ -63,7 +64,7 @@ jobs:
           cache-to: type=gha,mode=max
           build-args: |
             SYNC_REPO=https://github.com/${{ github.repository }}
-            SYNC_BRANCH=${{ github.ref }}
+            SYNC_BRANCH=${{ github.ref_name }}
 
       # output image digest
       - name: Output image digest
