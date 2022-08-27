@@ -1,6 +1,6 @@
 homekit:
   name: Home Assistant
-  advertise_ip: !secret ip_coruscant
+  advertise_ip: !secret ip_dathomir
   port: 21063
   filter:
     include_domains:
