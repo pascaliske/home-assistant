@@ -5,7 +5,6 @@ trigger:
     - binary_sensor.hallway_entrance_door_lumi_contact
     - binary_sensor.kitchen_balcony_door_lumi_contact
     - binary_sensor.guest_bathroom_window_lumi_contact
-    - binary_sensor.office_motion_sensor_zone
   from: 'off'
   to: 'on'
 condition:
