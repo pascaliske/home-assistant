@@ -429,6 +429,9 @@ cards:
                   name: Versions
                   state_header: Latest
                   secondary_info: last-changed
+                  tap_action:
+                    action: url
+                    url_path: https://www.home-assistant.io/blog/categories/release-notes/
                   entities:
                     - entity: sensor.current_version
                       name: Current
