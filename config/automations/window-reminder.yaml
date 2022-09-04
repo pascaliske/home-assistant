@@ -17,19 +17,8 @@ condition:
         attribute: temperature
         below: 16
 action:
-  - alias: Repeat notification until entity is closed
-    repeat:
-      until:
-        - condition: state
-          entity_id: binary_sensor.guest_bathroom_window_lumi_contact
-          state: 'off'
-      sequence:
-        # send reminder notification
-        - service: notify.slack
-          data_template:
-            title: Close Reminder
-            message: >
-              :window: The {{ trigger.to_state.attributes.friendly_name }} is open for 5 minutes with {{ state_attr('weather.home', 'temperature') }}°C outside - close it now!
-
-        # wait 5 minutes until next notification
-        - delay: '00:05'
+  service: notify.slack
+  data_template:
+    title: Close Reminder
+    message: >
+      :window: The {{ trigger.to_state.attributes.friendly_name }} is open for 5 minutes with {{ state_attr('weather.home', 'temperature') }}°C outside - close it now!
