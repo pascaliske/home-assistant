@@ -9,7 +9,7 @@ action:
     data:
       title: Vacation Mode
       message: >
-        :palm_tree: Vacation Mode will be {{ 'enabled in 3 minutes' if is_state('switch.vacation_mode', 'on') else 'disabled immediately' }}.
+        :palm_tree: Vacation Mode will be {{ 'enabled in 3 minutes' if is_state('switch.vacation_mode', 'off') else 'disabled immediately' }}.
 
   # wait 3 minutes if vacation mode will be turned on
   - delay: "{{ '00:03' if is_state('switch.vacation_mode', 'off') else '00:00' }}"
