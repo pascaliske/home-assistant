@@ -1,0 +1,22 @@
+# activate preset
+office_desk_activate:
+  alias: Office Desk Activate Preset
+  fields:
+    preset:
+      description: The preset to activate
+      example: Morning
+      selector:
+        select:
+          options:
+            - Morning
+            - Breathe
+            - Tetris
+  sequence:
+    - service: light.turn_on
+      target:
+        entity_id: light.office_desk_wled
+    - service: select.select_option
+      target:
+        entity_id: select.office_desk_wled_preset
+      data:
+        option: "{{ preset }}"

@@ -49,18 +49,36 @@ cards:
                   entities:
                     - entity: sensor.office_desk_lamp_power
                       name: false
-                - entity: light.office_desk_background
+                - entity: light.office_desk_wled
                   secondary_info: last-changed
                 - type: custom:rgb-light-card
                   entity: light.office_desk
                   justify: around
                   colors:
-                    - hs_color: [30, 95] #
-                    - hs_color: [165, 100] #
-                    - hs_color: [90, 0] #
-                    - hs_color: [280, 27] #
-                    - hs_color: [301, 24] #
-                    - hs_color: [15, 100] #
+                    - type: call-service
+                      service: script.turn_on
+                      service_data:
+                        entity_id: script.office_desk_activate
+                        data:
+                          variables:
+                            preset: Morning
+                      icon_color: '#000000'
+                    - type: call-service
+                      service: script.turn_on
+                      service_data:
+                        entity_id: script.office_desk_activate
+                        data:
+                          variables:
+                            preset: Breathe
+                      icon_color: '#000000'
+                    - type: call-service
+                      service: script.turn_on
+                      service_data:
+                        entity_id: script.office_desk_activate
+                        data:
+                          variables:
+                            preset: Tetris
+                      icon_color: '#000000'
     card_mod:
       style: |
         ha-card {
