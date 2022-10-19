@@ -59,26 +59,23 @@ cards:
                       service: script.turn_on
                       service_data:
                         entity_id: script.office_desk_activate
-                        data:
-                          variables:
-                            preset: Morning
-                      icon_color: '#000000'
+                        variables:
+                          preset: Morning
+                      icon_color: '#09fa88'
                     - type: call-service
                       service: script.turn_on
                       service_data:
                         entity_id: script.office_desk_activate
-                        data:
-                          variables:
-                            preset: Breathe
-                      icon_color: '#000000'
+                        variables:
+                          preset: Breathe
+                      icon_color: '#a7e5c6'
                     - type: call-service
                       service: script.turn_on
                       service_data:
                         entity_id: script.office_desk_activate
-                        data:
-                          variables:
-                            preset: Tetris
-                      icon_color: '#000000'
+                        variables:
+                          preset: Tetris
+                      icon_color: '#462a5d'
     card_mod:
       style: |
         ha-card {
