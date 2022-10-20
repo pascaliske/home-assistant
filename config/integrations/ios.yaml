@@ -8,3 +8,11 @@ ios:
       icon:
         icon: bed-king-outline
         color: '#ffffff'
+    - name: Work
+      background_color: '#98f36d'
+      label:
+        text: Work
+        color: '#000000'
+      icon:
+        icon: briefcase-outline
+        color: '#000000'
