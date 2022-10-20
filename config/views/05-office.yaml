@@ -49,8 +49,13 @@ cards:
                   entities:
                     - entity: sensor.office_desk_lamp_power
                       name: false
-                - entity: light.office_desk_wled
+                - type: custom:multiple-entity-row
+                  entity: light.office_desk_wled
                   secondary_info: last-changed
+                  toggle: true
+                  entities:
+                    - entity: sensor.office_desk_wled_estimated_current
+                      name: false
                 - type: custom:rgb-light-card
                   entity: light.office_desk_wled
                   justify: around
