@@ -350,18 +350,38 @@ cards:
                   entities:
                     - entity: sensor.office_desk_lamp_power
                       name: false
-                - entity: light.office_desk_background
+                - type: custom:multiple-entity-row
+                  entity: light.office_desk_wled
                   secondary_info: last-changed
+                  toggle: true
+                  entities:
+                    - entity: sensor.office_desk_wled_estimated_current
+                      name: false
                 - type: custom:rgb-light-card
-                  entity: light.office_desk
+                  entity: light.office_desk_wled
                   justify: around
                   colors:
-                    - hs_color: [30, 95] #
-                    - hs_color: [165, 100] #
-                    - hs_color: [90, 0] #
-                    - hs_color: [280, 27] #
-                    - hs_color: [301, 24] #
-                    - hs_color: [15, 100] #
+                    - type: call-service
+                      service: script.turn_on
+                      service_data:
+                        entity_id: script.office_desk_activate
+                        variables:
+                          preset: Morning
+                      icon_color: '#09fa88'
+                    - type: call-service
+                      service: script.turn_on
+                      service_data:
+                        entity_id: script.office_desk_activate
+                        variables:
+                          preset: Breathe
+                      icon_color: '#a7e5c6'
+                    - type: call-service
+                      service: script.turn_on
+                      service_data:
+                        entity_id: script.office_desk_activate
+                        variables:
+                          preset: Tetris
+                      icon_color: '#462a5d'
 
             # kitchen
             - type: entity-filter
