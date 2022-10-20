@@ -52,7 +52,7 @@ cards:
                 - entity: light.office_desk_wled
                   secondary_info: last-changed
                 - type: custom:rgb-light-card
-                  entity: light.office_desk
+                  entity: light.office_desk_wled
                   justify: around
                   colors:
                     - type: call-service
