@@ -1,0 +1,15 @@
+alias: Office Desk Turn Off After Sunrise
+description: >-
+  This automation turns off the Office Desk light around 10 minutes after
+  sunrise depending on the actual sun elevation in degrees.
+trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    above: 2.5 # approx. 15 deg / hr -> 10 mins after sunrise
+action:
+  - service: light.turn_off
+    target:
+      entity_id: light.office_desk_wled
+    data:
+      transition: 30
