@@ -12,6 +12,7 @@ cards:
       layout:
         max_width: 1000
       cards:
+        # left column
         - type: vertical-stack
           cards:
             - type: media-control
@@ -71,6 +72,8 @@ cards:
                       name: Gas
                     - entity: sensor.tankerkoenig_tankcenter_rodgau_diesel
                       name: Diesel
+
+        # middle column
         - type: vertical-stack
           cards:
             # hallway
@@ -197,6 +200,13 @@ cards:
                       h2.text-divider span {
                         padding: 10px 1em;
                       }
+                - type: custom:multiple-entity-row
+                  entity: switch.lichterkette_schlafzimmer
+                  secondary_info: last-changed
+                  toggle: true
+                  entities:
+                    - entity: sensor.lichterkette_schlafzimmer_power
+                      name: false
                 - entity: light.bedroom_closet
                   secondary_info: last-changed
                 - type: custom:rgb-light-card
@@ -265,6 +275,13 @@ cards:
                     - entity: sensor.duftlampe_power
                       name: false
                 - type: custom:multiple-entity-row
+                  entity: switch.lichterkette_wohnzimmer
+                  secondary_info: last-changed
+                  toggle: true
+                  entities:
+                    - entity: sensor.lichterkette_wohnzimmer_power
+                      name: false
+                - type: custom:multiple-entity-row
                   entity: switch.baum
                   secondary_info: last-changed
                   toggle: true
@@ -292,6 +309,8 @@ cards:
                     - hs_color: [280, 27]
                     - hs_color: [165, 100]
                     - hs_color: [15, 100]
+
+        # right column
         - type: vertical-stack
           cards:
             # office
@@ -434,11 +453,11 @@ cards:
                         padding: 10px 1em;
                       }
                 - type: custom:multiple-entity-row
-                  entity: switch.lichterkette
+                  entity: switch.lichterkette_kueche
                   secondary_info: last-changed
                   toggle: true
                   entities:
-                    - entity: sensor.lichterkette_power
+                    - entity: sensor.lichterkette_kueche_power
                       name: false
 
             # bathroom

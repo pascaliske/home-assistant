@@ -17,7 +17,9 @@ cloud:
         - switch.baum
         - switch.duftlampe
         - switch.lampe
-        - switch.lichterkette
+        - switch.lichterkette_kueche
+        - switch.lichterkette_schlafzimmer
+        - switch.lichterkette_wohnzimmer
         - switch.love
         - switch.kugel
 
@@ -29,6 +31,11 @@ cloud:
         - light
         - switch
       exclude_entities:
+        - switch.office_desk_wled_nightlight
+        - switch.office_desk_wled_reverse
+        - switch.office_desk_wled_segment_1_reverse
+        - switch.office_desk_wled_sync_receive
+        - switch.office_desk_wled_sync_send
         - switch.fritz_box_7590_wi_fi_easy_huggie_box
         - switch.fritz_box_7590_wi_fi_easy_huggie_box_5ghz
         - switch.fritz_box_7590_wi_fi_fritz_box_gastzugang
@@ -60,6 +67,9 @@ cloud:
       light.living_room_tv_leds:
         name: LEDs
         display_categories: LIGHT
+      light.office_desk_wled:
+        name: Desk LEDs
+        display_categories: LIGHT
 
       # switches
       switch.baum:
@@ -68,7 +78,13 @@ cloud:
       switch.lampe:
         name: Lampe
         display_categories: LIGHT
-      switch.lichterkette:
+      switch.lichterkette_kueche:
+        name: Lichterkette
+        display_categories: LIGHT
+      switch.lichterkette_schlafzimmer:
+        name: Lichterkette
+        display_categories: LIGHT
+      switch.lichterkette_wohnzimmer:
         name: Lichterkette
         display_categories: LIGHT
       switch.love:

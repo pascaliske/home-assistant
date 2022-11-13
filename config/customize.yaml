@@ -1,6 +1,8 @@
 # living room
 switch.baum:
   icon: mdi:string-lights
+switch.lichterkette_wohnzimmer:
+  icon: mdi:string-lights
 switch.duftlampe:
   icon: mdi:lightbulb
 switch.lampe:
@@ -11,7 +13,7 @@ light.living_room_tv_leds:
   icon: mdi:string-lights
 
 # kitchen
-switch.lichterkette:
+switch.lichterkette_kueche:
   icon: mdi:string-lights
 
 # bathroom
@@ -21,6 +23,8 @@ sensor.withings_weight_kg_sarah_iske:
   friendly_name: Sarahs Weight
 
 # bedroom
+switch.lichterkette_schlafzimmer:
+  icon: mdi:string-lights
 light.bedroom_closet:
   icon: mdi:string-lights
 
@@ -40,7 +44,7 @@ sensor.canon_mx470_series_color:
   friendly_name: Color Ink
 switch.office_desk_lamp:
   icon: mdi:lightbulb
-light.office_desk_background:
+light.office_desk_wled:
   icon: mdi:string-lights
 
 # other

@@ -43,11 +43,11 @@ cards:
               show_header_toggle: true
               entities:
                 - type: custom:multiple-entity-row
-                  entity: switch.lichterkette
+                  entity: switch.lichterkette_kueche
                   secondary_info: last-changed
                   toggle: true
                   entities:
-                    - entity: sensor.lichterkette_power
+                    - entity: sensor.lichterkette_kueche_power
                       name: false
     card_mod:
       style: |
