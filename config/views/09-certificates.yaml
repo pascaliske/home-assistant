@@ -12,6 +12,7 @@ cards:
       layout:
         max_width: 1000
       cards:
+        # left column
         - type: vertical-stack
           cards:
             - type: entities
@@ -22,12 +23,18 @@ cards:
                   name: iske.cloud
                 - entity: sensor.cert_expiry_alerts_iske_cloud
                   name: alerts.iske.cloud
+                - entity: sensor.cert_expiry_auth_iske_cloud
+                  name: auth.iske.cloud
+                - entity: sensor.cert_expiry_blocky_iske_cloud
+                  name: blocky.iske.cloud
                 - entity: sensor.cert_expiry_drop_iske_cloud
                   name: drop.iske.cloud
                 - entity: sensor.cert_expiry_grafana_iske_cloud
                   name: grafana.iske.cloud
                 - entity: sensor.cert_expiry_homeassistant_iske_cloud
                   name: homeassistant.iske.cloud
+                - entity: sensor.cert_expiry_loki_iske_cloud
+                  name: loki.iske.cloud
                 - entity: sensor.cert_expiry_prometheus_iske_cloud
                   name: prometheus.iske.cloud
                 - entity: sensor.cert_expiry_status_iske_cloud
@@ -67,6 +74,8 @@ cards:
                   name: links.pascaliske.dev
                 - entity: sensor.cert_expiry_registry_pascaliske_dev
                   name: registry.pascaliske.dev
+
+        # right column
         - type: vertical-stack
           cards:
             - type: entities
@@ -77,9 +86,21 @@ cards:
                   name: pascaliske.dev
                 - entity: sensor.cert_expiry_charts_pascaliske_dev
                   name: charts.pascaliske.dev
-                - entity: sensor.cert_expiry_tonies_me
-                  name: tonies.me
+                - entity: sensor.cert_expiry_k8s_pascaliske_dev
+                  name: k8s.pascaliske.dev
                 # - entity: sensor.cert_expiry_time_pascaliske_dev
                 #   name: time.pascaliske.dev
                 # - entity: sensor.cert_expiry_travel_pascaliske_dev
                 #   name: travel.pascaliske.dev
+                - entity: sensor.cert_expiry_tonies_me
+                  name: tonies.me
+    card_mod:
+      style: |
+        ha-card {
+          max-width: calc(100% + 7px);
+          margin-top: -8px;
+          margin-right: -8px;
+          margin-left: -7px;
+          transition: none;
+          border: 0;
+        }

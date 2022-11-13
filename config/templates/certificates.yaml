@@ -55,6 +55,14 @@
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_go_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
+    # k8s.pascaliske.dev
+    - name: cert_expiry_k8s_pascaliske_dev
+      unit_of_measurement: Days
+      icon: mdi:certificate
+      state: >
+        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_k8s_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
+        {{ (diff / 60 / 1440) | round(0) }}
+
     # links.pascaliske.dev
     - name: cert_expiry_links_pascaliske_dev
       unit_of_measurement: Days
@@ -111,6 +119,14 @@
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_auth_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
+    # blocky.iske.cloud
+    - name: cert_expiry_blocky_iske_cloud
+      unit_of_measurement: Days
+      icon: mdi:certificate
+      state: >
+        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_blocky_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
+        {{ (diff / 60 / 1440) | round(0) }}
+
     # drop.iske.cloud
     - name: cert_expiry_drop_iske_cloud
       unit_of_measurement: Days
@@ -133,6 +149,14 @@
       icon: mdi:certificate
       state: >
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_homeassistant_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
+        {{ (diff / 60 / 1440) | round(0) }}
+
+    # loki.iske.cloud
+    - name: cert_expiry_loki_iske_cloud
+      unit_of_measurement: Days
+      icon: mdi:certificate
+      state: >
+        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_loki_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
     # prometheus.iske.cloud
