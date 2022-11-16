@@ -1,5 +1,5 @@
 # tini
-FROM --platform=${BUILDPLATFORM} alpine:3.16 as tini
+FROM --platform=${BUILDPLATFORM} alpine:3.17 as tini
 LABEL maintainer="info@pascaliske.dev"
 
 # environment
@@ -19,7 +19,7 @@ RUN case ${TARGETPLATFORM} in \
 FROM k8s.gcr.io/git-sync/git-sync:v3.6.1 as git-sync
 
 # final image
-FROM alpine:3.16
+FROM alpine:3.17
 LABEL maintainer="info@pascaliske.dev"
 
 # environment
