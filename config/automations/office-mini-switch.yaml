@@ -20,3 +20,7 @@ use_blueprint:
           entity_id: select.office_desk_wled_preset
         data:
           option: Morning
+    button_double_press:
+      - service: switch.toggle
+        target:
+          entity_id: switch.office_desk_lamp
