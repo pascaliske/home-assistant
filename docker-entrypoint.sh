@@ -14,7 +14,8 @@ if [ "${GIT_SYNC_ONE_TIME}" = 'true' ]; then
         echo "==> Connected: ${SYNC_DIR_PATH} -> /config"
         ln -sf "${SYNC_DIR_PATH}"/* /config
     else
-        echo "==> Warning: Skipped linking due to failed git-sync command!"
+        echo "==> Error: Failed to connect configuration due to failed git-sync command!"
+        exit 1
     fi
 fi
 
