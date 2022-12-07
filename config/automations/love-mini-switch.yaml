@@ -6,23 +6,10 @@ use_blueprint:
   input:
     aqara_mini_switch: 9959beea1aa127c59c25518950573b87
     button_single_press:
-      - service: >
-          {% if is_state('switch.love', 'on') %}
-            homeassistant.turn_off
-          {% else %}
-            homeassistant.turn_on
-          {% endif %}
+      - service: switch.toggle
         target:
-          entity_id: group.love
+          entity_id: switch.love
     button_double_press:
-      - condition: state
-        entity_id: switch.love
-        state: 'off'
-      - service: homeassistant.turn_on
+      - service: switch.toggle
         target:
-          entity_id: group.love
-      - delay:
-          minutes: 10
-      - service: homeassistant.turn_off
-        target:
-          entity_id: group.love
+          entity_id: switch.babyphone
