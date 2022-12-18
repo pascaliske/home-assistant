@@ -1,10 +1,13 @@
 # general settings
 homeassistant:
   name: N12
+  country: DE
+  language: en
   latitude: !secret home_latitude
   longitude: !secret home_longitude
-  unit_system: metric
   time_zone: !secret home_timezone
+  unit_system: metric
+  currency: EUR
 
 # enables configuration ui
 config:
