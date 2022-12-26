@@ -7,12 +7,16 @@ all_switches:
     - switch.baum
     - switch.lampe
     - switch.kugel
+    - switch.lichterkette_wohnzimmer
 
     # kitchen
     - switch.lichterkette
 
     # childrens room
     - switch.love
+
+    # bedroom
+    - switch.lichterkette_schlafzimmer
 all_lights:
   name: All Lights
   icon: mdi:lightbulb-group
