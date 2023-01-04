@@ -6,4 +6,4 @@
 
 ## License
 
-[MIT](LICENSE.md) – © 2022 [Pascal Iske](https://pascaliske.dev)
+[MIT](LICENSE.md) – © 2023 [Pascal Iske](https://pascaliske.dev)
