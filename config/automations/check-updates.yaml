@@ -7,18 +7,12 @@ condition:
   value_template: >
     {{ states('sensor.latest_version') > states('sensor.current_version') }}
 action:
-  - service: notify.slack
+  - service: notify.home_assistant
     data:
+      target: [!secret discord_channel]
       title: Update available
       message: >
         New version available: {{ states('sensor.latest_version') }}
-      data:
-        blocks:
-          - type: section
-            text:
-              type: mrkdwn
-              text: >
-                :tada: New version available: <https://github.com/home-assistant/core/releases/tag/{{ states('sensor.latest_version') }}|{{ states('sensor.latest_version') }}> | <https://www.home-assistant.io/blog/categories/release-notes/|Releases>
   - service: persistent_notification.create
     data_template:
       title: Update available

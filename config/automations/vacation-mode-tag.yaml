@@ -5,8 +5,9 @@ trigger:
     tag_id: 598a8118-a5e4-4610-9078-ee90a1dda05b
 action:
   # send notification
-  - service: notify.slack
+  - service: notify.home_assistant
     data:
+      target: [!secret discord_channel]
       title: Vacation Mode
       message: >
         :palm_tree: Vacation Mode will be {{ 'enabled in 3 minutes' if is_state('switch.vacation_mode', 'off') else 'disabled immediately' }}.

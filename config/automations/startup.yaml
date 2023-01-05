@@ -6,8 +6,9 @@ action:
   - service: frontend.set_theme
     data:
       name: Google - Dark
-  - service: notify.slack
+  - service: notify.home_assistant
     data:
+      target: [!secret discord_channel]
       title: Home Assistant
       message: >
         :white_check_mark: System has been started successfully!

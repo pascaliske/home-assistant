@@ -3,9 +3,9 @@ use_blueprint:
   path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
   input:
     actions:
-      - service: notify.slack
+      - service: notify.home_assistant
         data_template:
+          target: [!secret discord_channel]
           title: Battery Level Check
           message: >
             :zap: Low battery level for sensors: {{ sensors | replace(' battery state', '') }}.
-

@@ -12,8 +12,9 @@ condition:
     entity_id: input_boolean.vacation_mode
     state: 'on'
 action:
-  - service: notify.slack
+  - service: notify.home_assistant
     data_template:
+      target: [!secret discord_channel]
       title: Vacation Mode Notification
       message: >
         :door: The {{ trigger.to_state.attributes.friendly_name }} was opened!
