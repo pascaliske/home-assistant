@@ -1,7 +1,9 @@
 alias: Check Home Assistant Version once a day
 trigger:
-  platform: time
-  at: '08:00:00'
+  - platform: homeassistant
+    event: start
+  - platform: time
+    at: '08:00:00'
 condition:
   condition: template
   value_template: >
