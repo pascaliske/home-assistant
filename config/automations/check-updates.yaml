@@ -16,7 +16,7 @@ action:
         embed:
           title: >
             {{ states('sensor.current_version') }}
-          color: 049cdb
+          color: 15105570 # orange
           url: >
             https://www.home-assistant.io/latest-release-notes
           fields:
