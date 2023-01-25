@@ -74,6 +74,8 @@ cards:
                   name: links.pascaliske.dev
                 - entity: sensor.cert_expiry_registry_pascaliske_dev
                   name: registry.pascaliske.dev
+                - entity: sensor.cert_expiry_tasks_pascaliske_dev
+                  name: tasks.pascaliske.dev
 
         # right column
         - type: vertical-stack
