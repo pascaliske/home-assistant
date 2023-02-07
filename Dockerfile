@@ -16,7 +16,7 @@ RUN case ${TARGETPLATFORM} in \
     && chmod +x /tini
 
 # git-sync
-FROM k8s.gcr.io/git-sync/git-sync:v3.6.3 as git-sync
+FROM k8s.gcr.io/git-sync/git-sync:v3.6.4 as git-sync
 
 # final image
 FROM alpine:3.17
