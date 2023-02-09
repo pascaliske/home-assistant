@@ -42,8 +42,9 @@ sensor.canon_mx470_series_black:
   friendly_name: Black Ink
 sensor.canon_mx470_series_color:
   friendly_name: Color Ink
-switch.office_desk_lamp:
-  icon: mdi:lightbulb
+switch.office_scanner:
+  icon: mdi:scanner
+  friendly_name: Scanner
 light.office_desk_wled:
   icon: mdi:string-lights
 

@@ -363,11 +363,11 @@ cards:
                         padding: 10px 1em;
                       }
                 - type: custom:multiple-entity-row
-                  entity: switch.office_desk_lamp
+                  entity: switch.office_scanner
                   secondary_info: last-changed
                   toggle: true
                   entities:
-                    - entity: sensor.office_desk_lamp_power
+                    - entity: sensor.office_scanner_power
                       name: false
                 - type: custom:multiple-entity-row
                   entity: light.office_desk_wled

@@ -23,4 +23,4 @@ use_blueprint:
     button_double_press:
       - service: switch.toggle
         target:
-          entity_id: switch.office_desk_lamp
+          entity_id: switch.office_scanner
