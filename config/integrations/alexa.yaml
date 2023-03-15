@@ -99,5 +99,7 @@ cloud:
         name: Netflix
         display_categories: STREAMING_DEVICE
       switch.synology_nas:
-        name: Synology NAS
+        name: Box
         display_categories: NETWORK_HARDWARE
+      switch.vacation_mode:
+        name: Urlaub 
