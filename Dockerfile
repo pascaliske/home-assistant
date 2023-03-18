@@ -15,9 +15,6 @@ RUN case ${TARGETPLATFORM} in \
     && wget -q https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-${TINI_ARCH} -O /tini \
     && chmod +x /tini
 
-# git-sync
-FROM registry.k8s.io/git-sync/git-sync:v3.6.4 as git-sync
-
 # final image
 FROM alpine:3.17
 LABEL maintainer="info@pascaliske.dev"
@@ -35,7 +32,7 @@ RUN apk add --no-cache git
 
 # inject built files
 COPY --from=tini /tini /sbin/tini
-COPY --from=git-sync /git-sync /sbin/git-sync
+COPY --from=registry.k8s.io/git-sync/git-sync:v3.6.4 /git-sync /sbin/git-sync
 
 # inject entrypoint
 COPY docker-entrypoint.sh /docker-entrypoint.sh
