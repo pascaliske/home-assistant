@@ -7,6 +7,14 @@
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
+    # analytics.pascaliske.dev
+    - name: cert_expiry_analytics_pascaliske_dev
+      unit_of_measurement: Days
+      icon: mdi:certificate
+      state: >
+        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_analytics_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
+        {{ (diff / 60 / 1440) | round(0) }}
+
     # auth.pascaliske.dev
     - name: cert_expiry_auth_pascaliske_dev
       unit_of_measurement: Days
@@ -79,6 +87,14 @@
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_registry_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
+    # status.pascaliske.dev
+    - name: cert_expiry_status_pascaliske_dev
+      unit_of_measurement: Days
+      icon: mdi:certificate
+      state: >
+        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_status_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
+        {{ (diff / 60 / 1440) | round(0) }}
+
     # tasks.pascaliske.dev
     - name: cert_expiry_tasks_pascaliske_dev
       unit_of_measurement: Days
@@ -102,6 +118,14 @@
     #   state: >
     #     {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_travel_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
     #     {{ (diff / 60 / 1440) | round(0) }}
+
+    # vehicles.pascaliske.dev
+    - name: cert_expiry_vehicles_pascaliske_dev
+      unit_of_measurement: Days
+      icon: mdi:certificate
+      state: >
+        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_vehicles_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
+        {{ (diff / 60 / 1440) | round(0) }}
 
     # iske.cloud
     - name: cert_expiry_iske_cloud
@@ -173,14 +197,6 @@
       icon: mdi:certificate
       state: >
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_prometheus_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
-        {{ (diff / 60 / 1440) | round(0) }}
-
-    # status.iske.cloud
-    - name: cert_expiry_status_iske_cloud
-      unit_of_measurement: Days
-      icon: mdi:certificate
-      state: >
-        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_status_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
     # traefik.iske.cloud

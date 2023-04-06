@@ -37,8 +37,6 @@ cards:
                   name: loki.iske.cloud
                 - entity: sensor.cert_expiry_prometheus_iske_cloud
                   name: prometheus.iske.cloud
-                - entity: sensor.cert_expiry_status_iske_cloud
-                  name: status.iske.cloud
                 - entity: sensor.cert_expiry_traefik_iske_cloud
                   name: traefik.iske.cloud
                 - entity: sensor.cert_expiry_unifi_iske_cloud
@@ -60,6 +58,8 @@ cards:
                       h2.text-divider span {
                         padding: 10px 1em;
                       }
+                - entity: sensor.cert_expiry_analytics_pascaliske_dev
+                  name: analytics.pascaliske.dev
                 - entity: sensor.cert_expiry_auth_pascaliske_dev
                   name: auth.pascaliske.dev
                 - entity: sensor.cert_expiry_code_pascaliske_dev
@@ -74,8 +74,12 @@ cards:
                   name: links.pascaliske.dev
                 - entity: sensor.cert_expiry_registry_pascaliske_dev
                   name: registry.pascaliske.dev
+                - entity: sensor.cert_expiry_status_pascaliske_dev
+                  name: status.pascaliske.dev
                 - entity: sensor.cert_expiry_tasks_pascaliske_dev
                   name: tasks.pascaliske.dev
+                - entity: sensor.cert_expiry_vehicles_pascaliske_dev
+                  name: vehicles.pascaliske.dev
 
         # right column
         - type: vertical-stack
