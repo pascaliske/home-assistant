@@ -1,0 +1,7 @@
+command_line:
+  # cpu temperature
+  - sensor:
+      name: CPU Temperature
+      command: cat /sys/class/thermal/thermal_zone0/temp
+      value_template: '{{ value | multiply(0.001) | round(1) }}'
+      unit_of_measurement: °C
