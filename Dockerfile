@@ -33,7 +33,7 @@ RUN apk add --no-cache git
 
 # inject built files
 COPY --from=tini /tini /sbin/tini
-COPY --from=registry.k8s.io/git-sync/git-sync:v3.6.8 /git-sync /sbin/git-sync
+COPY --from=registry.k8s.io/git-sync/git-sync:v3.6.9 /git-sync /sbin/git-sync
 
 # inject entrypoint
 COPY docker-entrypoint.sh /docker-entrypoint.sh
