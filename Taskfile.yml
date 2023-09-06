@@ -2,10 +2,14 @@ version: '3'
 
 tasks:
   # list modified files
-  diff: git ls-files --modified
+  diff:
+    desc: List all changed files.
+    cmds:
+      - git ls-files --modified
 
   # prepare configuration files
   prepare:
+    desc: Prepare configuration files for config-check workflow.
     cmds:
       - task: disable:secrets
       - task: disable:integrations
@@ -13,12 +17,14 @@ tasks:
 
   # replace secret references
   disable:secrets:
+    desc: Disable all secret references because they can not be resolved during config-check.
     cmds:
       - sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/*.yaml
       - sed -E -i 's/!secret ([a-z0-9_]+)/"\1"/' config/**/*.yaml
 
   # disable config files
   disable:integrations:
+    desc: Disable http and homekit integrations because they rely on external resources.
     cmds:
       - mv config/integrations/homekit.yaml{,.disabled}
       - mv config/integrations/http.yaml{,.disabled}
@@ -27,6 +33,7 @@ tasks:
       - test -f config/integrations/http.yaml.disabled
 
   disable:automations:
+    desc: Disable all automations containing a reference to a blueprint.
     cmds:
       - mv config/automations/battery-check.yaml{,.disabled}
       - mv config/automations/bedroom-mini-switch.yaml{,.disabled}
