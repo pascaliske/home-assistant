@@ -22,18 +22,18 @@ LABEL maintainer="info@pascaliske.dev"
 # environment
 ARG SYNC_REPO
 ARG SYNC_BRANCH
-ENV GIT_SYNC_REPO=${SYNC_REPO}
-ENV GIT_SYNC_BRANCH=${SYNC_BRANCH}
-ENV GIT_SYNC_ROOT=/config-sync
-ENV GIT_SYNC_DEST=${SYNC_BRANCH}
-ENV GIT_SYNC_MAX_SYNC_FAILURES=3
+ENV GITSYNC_REPO=${SYNC_REPO}
+ENV GITSYNC_REF=${SYNC_BRANCH}
+ENV GITSYNC_ROOT=/config-sync
+ENV GITSYNC_LINK=${SYNC_BRANCH}
+ENV GITSYNC_MAX_FAILURES=3
 
 # install git
 RUN apk add --no-cache git
 
 # inject built files
 COPY --from=tini /tini /sbin/tini
-COPY --from=registry.k8s.io/git-sync/git-sync:v3.6.9 /git-sync /sbin/git-sync
+COPY --from=registry.k8s.io/git-sync/git-sync:v4.0.0 /git-sync /sbin/git-sync
 
 # inject entrypoint
 COPY docker-entrypoint.sh /docker-entrypoint.sh
