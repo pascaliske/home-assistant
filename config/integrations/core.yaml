@@ -39,9 +39,6 @@ recorder:
 frontend:
   themes: !include_dir_merge_named ../themes
 
-# enable auto discovery
-discovery:
-
 # enable ios frontend
 ios:
 
