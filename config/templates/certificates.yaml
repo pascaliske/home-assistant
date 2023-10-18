@@ -55,14 +55,6 @@
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_git_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
-    # go.pascaliske.dev
-    - name: cert_expiry_go_pascaliske_dev
-      unit_of_measurement: Days
-      icon: mdi:certificate
-      state: >
-        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_go_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
-        {{ (diff / 60 / 1440) | round(0) }}
-
     # k8s.pascaliske.dev
     - name: cert_expiry_k8s_pascaliske_dev
       unit_of_measurement: Days
@@ -102,22 +94,6 @@
       state: >
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_tasks_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
-
-    # # time.pascaliske.dev
-    # - name: cert_expiry_time_pascaliske_dev
-    #   unit_of_measurement: Days
-    #   icon: mdi:certificate
-    #   state: >
-    #     {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_time_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
-    #     {{ (diff / 60 / 1440) | round(0) }}
-
-    # # travel.pascaliske.dev
-    # - name: cert_expiry_travel_pascaliske_dev
-    #   unit_of_measurement: Days
-    #   icon: mdi:certificate
-    #   state: >
-    #     {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_travel_pascaliske_dev'), as_timestamp(now())) - as_timestamp(now()) | int %}
-    #     {{ (diff / 60 / 1440) | round(0) }}
 
     # vehicles.pascaliske.dev
     - name: cert_expiry_vehicles_pascaliske_dev
