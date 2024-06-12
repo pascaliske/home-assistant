@@ -1,14 +1,6 @@
-# system monitor
-- platform: systemmonitor
-  resources:
-    - type: last_boot
-    - type: ipv4_address
-      arg: eth0
-
-# relative last boot
-- platform: template
-  sensors:
-    relative_last_boot:
+- sensor:
+    # relative last boot time
+    - name: relative_last_boot
       friendly_name: Relative Last Boot
       unit_of_measurement: days ago
       value_template: >
