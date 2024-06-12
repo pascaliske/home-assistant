@@ -1,9 +1,8 @@
 - sensor:
     # relative last boot time
-    - name: relative_last_boot
-      friendly_name: Relative Last Boot
+    - name: Relative Last Boot
       unit_of_measurement: days ago
-      value_template: >
+      state: >
         {% set date = strptime(states('sensor.last_boot'), '%Y-%m-%dT%H:%M:%S%z') %}
         {% set diff = now() - date %}
         {{ diff.days }}
