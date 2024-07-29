@@ -2,14 +2,14 @@ name: Image
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - Dockerfile
       - docker-entrypoint.sh
       - .github/workflows/image.yml
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -87,5 +87,5 @@ jobs:
         if: github.event_name != 'pull_request'
         id: scan
         with:
-          image: ghcr.io/${{ github.repository }}:master
+          image: ghcr.io/${{ github.repository }}:main
           annotations: true
