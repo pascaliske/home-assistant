@@ -6,7 +6,7 @@ action:
   - service: frontend.set_theme
     data:
       name: Google - Dark
-  - service: notify.home_assistant
+  - service: notify.discord
     data:
       target: [!secret discord_channel]
       title: Home Assistant
