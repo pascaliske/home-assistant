@@ -9,7 +9,7 @@ conditions:
   value_template: >
     {{ states('sensor.latest_version') > states('sensor.current_version') }}
 actions:
-  - action: notify.discord
+  - action: notify.home_assistant
     data_template:
       target: [!secret discord_channel]
       title: Update available
