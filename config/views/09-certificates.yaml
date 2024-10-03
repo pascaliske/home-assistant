@@ -62,8 +62,6 @@ cards:
                   name: analytics.pascaliske.dev
                 - entity: sensor.cert_expiry_auth_pascaliske_dev
                   name: auth.pascaliske.dev
-                - entity: sensor.cert_expiry_code_pascaliske_dev
-                  name: code.pascaliske.dev
                 - entity: sensor.cert_expiry_docs_pascaliske_dev
                   name: docs.pascaliske.dev
                 - entity: sensor.cert_expiry_git_pascaliske_dev
