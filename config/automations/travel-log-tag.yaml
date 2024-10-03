@@ -1,23 +1,23 @@
 alias: Travel Log Tag
 mode: single
-trigger:
+triggers:
   - platform: tag
     tag_id: d8011321-ba8d-482b-81ad-41f5dfbedd74
-condition:
+conditions:
   condition: not
   conditions:
     - condition: state
       entity_id: device_tracker.pascals_iphone
       state: home
-action:
+actions:
   - variables:
       latitude: '{{ state_attr("device_tracker.pascals_iphone", "latitude") }}'
       longitude: '{{ state_attr("device_tracker.pascals_iphone", "longitude") }}'
-  - service: rest_command.travel_log
+  - action: rest_command.travel_log
     data:
       latitude: '{{ latitude }}'
       longitude: '{{ longitude }}'
-  - service: notify.mobile_app_pascals_iphone
+  - action: notify.mobile_app_pascals_iphone
     data:
       title: Travel Log Created
       message: >

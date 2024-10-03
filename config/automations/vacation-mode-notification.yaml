@@ -1,5 +1,5 @@
 alias: Vacation Mode Notification
-trigger:
+triggers:
   platform: state
   entity_id:
     - binary_sensor.hallway_entrance_door_lumi_contact
@@ -7,12 +7,12 @@ trigger:
     - binary_sensor.guest_bathroom_window_lumi_contact
   from: 'off'
   to: 'on'
-condition:
+conditions:
   - condition: state
     entity_id: input_boolean.vacation_mode
     state: 'on'
-action:
-  - service: notify.home_assistant
+actions:
+  - action: notify.home_assistant
     data_template:
       target: [!secret discord_channel]
       title: Vacation Mode Notification

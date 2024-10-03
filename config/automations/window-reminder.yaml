@@ -1,12 +1,12 @@
 alias: Window Close Reminder
-trigger:
+triggers:
   platform: state
   entity_id:
     - binary_sensor.guest_bathroom_window_lumi_contact
   to: 'on'
   for:
     minutes: 5
-condition:
+conditions:
   - condition: or
     conditions:
       - condition: state
@@ -16,8 +16,8 @@ condition:
         entity_id: weather.home
         attribute: temperature
         below: 16
-action:
-  - service: notify.home_assistant
+actions:
+  - action: notify.home_assistant
     data_template:
       target: [!secret discord_channel]
       title: Close Reminder

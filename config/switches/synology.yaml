@@ -5,10 +5,10 @@
       value_template: "{{ not is_state('sensor.synologynas_temperature', 'unavailable') }}"
       icon_template: mdi:nas
       turn_on:
-        service: wake_on_lan.send_magic_packet
+        action: wake_on_lan.send_magic_packet
         data:
           mac: !secret mac_synology_nas
       turn_off:
-        service: button.press
+        action: button.press
         target:
           entity_id: button.ryloth_shutdown

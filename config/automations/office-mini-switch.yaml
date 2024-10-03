@@ -6,7 +6,7 @@ use_blueprint:
     aqara_mini_switch: 8f05e0fa818d07064a3e94c256426d6a
     button_single_press:
       # toggle office desk wled light
-      - service: light.toggle
+      - action: light.toggle
         target:
           entity_id: light.office_desk_wled
 
@@ -15,12 +15,12 @@ use_blueprint:
         condition: state
         entity_id: light.office_desk_wled
         state: 'on'
-      - service: select.select_option
+      - action: select.select_option
         target:
           entity_id: select.office_desk_wled_preset
         data:
           option: Morning
     button_double_press:
-      - service: switch.toggle
+      - action: switch.toggle
         target:
           entity_id: switch.office_scanner

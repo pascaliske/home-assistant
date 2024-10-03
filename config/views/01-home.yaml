@@ -380,23 +380,23 @@ cards:
                   entity: light.office_desk_wled
                   justify: around
                   colors:
-                    - type: call-service
-                      service: script.turn_on
-                      service_data:
+                    - type: action
+                      action: script.turn_on
+                      data:
                         entity_id: script.office_desk_activate
                         variables:
                           preset: Morning
                       icon_color: '#09fa88'
-                    - type: call-service
-                      service: script.turn_on
-                      service_data:
+                    - type: action
+                      action: script.turn_on
+                      data:
                         entity_id: script.office_desk_activate
                         variables:
                           preset: Breathe
                       icon_color: '#a7e5c6'
-                    - type: call-service
-                      service: script.turn_on
-                      service_data:
+                    - type: action
+                      action: script.turn_on
+                      data:
                         entity_id: script.office_desk_activate
                         variables:
                           preset: Tetris

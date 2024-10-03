@@ -1,12 +1,12 @@
 alias: Startup Checks
-trigger:
+triggers:
   - platform: homeassistant
     event: start
-action:
-  - service: frontend.set_theme
+actions:
+  - action: frontend.set_theme
     data:
       name: Google - Dark
-  - service: notify.discord
+  - action: notify.discord
     data:
       target: [!secret discord_channel]
       title: Home Assistant

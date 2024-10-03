@@ -1,11 +1,11 @@
 alias: Vacation Mode Tag
 mode: single
-trigger:
+triggers:
   - platform: tag
     tag_id: 598a8118-a5e4-4610-9078-ee90a1dda05b
-action:
+actions:
   # send notification
-  - service: notify.home_assistant
+  - action: notify.home_assistant
     data:
       target: [!secret discord_channel]
       title: Vacation Mode
@@ -16,7 +16,7 @@ action:
   - delay: "{{ '00:03' if is_state('switch.vacation_mode', 'off') else '00:00' }}"
 
   # toggle vacation mode switch
-  - service: switch.toggle
+  - action: switch.toggle
     data:
       entity_id: switch.vacation_mode
 
@@ -25,7 +25,7 @@ action:
     condition: state
     entity_id: switch.vacation_mode
     state: 'on'
-  - service: homeassistant.turn_off
+  - action: homeassistant.turn_off
     data:
       entity_id:
         - group.all_switches

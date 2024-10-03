@@ -5,10 +5,10 @@
       value_template: "{{ is_state('input_boolean.vacation_mode', 'on') }}"
       icon_template: mdi:palm-tree
       turn_on:
-        service: input_boolean.turn_on
+        action: input_boolean.turn_on
         target:
           entity_id: input_boolean.vacation_mode
       turn_off:
-        service: input_boolean.turn_off
+        action: input_boolean.turn_off
         target:
           entity_id: input_boolean.vacation_mode

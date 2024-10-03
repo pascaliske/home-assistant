@@ -1,15 +1,15 @@
 alias: Check Home Assistant Version once a day
-trigger:
+triggers:
   - platform: homeassistant
     event: start
   - platform: time
     at: '08:00:00'
-condition:
+conditions:
   condition: template
   value_template: >
     {{ states('sensor.latest_version') > states('sensor.current_version') }}
-action:
-  - service: notify.discord
+actions:
+  - action: notify.discord
     data_template:
       target: [!secret discord_channel]
       title: Update available
@@ -38,7 +38,7 @@ action:
               value: >
                 https://github.com/home-assistant/core/releases/tag/{{ states('sensor.latest_version') }}
               inline: false
-  - service: persistent_notification.create
+  - action: persistent_notification.create
     data_template:
       title: Update available
       notification_id: "Update available"

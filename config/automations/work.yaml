@@ -1,11 +1,11 @@
 alias: Work
-trigger:
+triggers:
   - platform: event
     event_type: ios.action_fired
     event_data:
       actionName: Work
-action:
-  - service: script.turn_on
+actions:
+  - action: script.turn_on
     target:
       entity_id: script.office_desk_activate
     data:
