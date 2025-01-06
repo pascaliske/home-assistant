@@ -12,13 +12,6 @@
   unit_prefix: k
   round: 2
 
-# sensor.duftlampe_power
-- platform: integration
-  source: sensor.duftlampe_power
-  name: Duftlampe Energy
-  unit_prefix: k
-  round: 2
-
 # sensor.lichterkette_power
 - platform: integration
   source: sensor.lichterkette_power
