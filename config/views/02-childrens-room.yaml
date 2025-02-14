@@ -51,6 +51,8 @@ cards:
               entities:
                 - entity: switch.babyphone
                   secondary_info: last-changed
+                - entity: switch.heat_lamp
+                  secondary_info: last-changed
     card_mod:
       style: |
         ha-card {

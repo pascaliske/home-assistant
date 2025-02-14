@@ -160,6 +160,13 @@ cards:
                   secondary_info: last-changed
                 - entity: switch.babyphone
                   secondary_info: last-changed
+                - type: custom:multiple-entity-row
+                  entity: switch.heat_lamp
+                  secondary_info: last-changed
+                  toggle: true
+                  entities:
+                    - entity: sensor.heat_lamp_power
+                      name: false
 
             # bedroom
             - type: entity-filter

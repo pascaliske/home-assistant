@@ -15,6 +15,7 @@ cloud:
 
         # switches
         - switch.baum
+        - switch.heat_lamp
         - switch.lampe
         - switch.lichterkette_kueche
         - switch.lichterkette_schlafzimmer

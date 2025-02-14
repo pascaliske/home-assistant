@@ -31,6 +31,8 @@ switch.love:
   icon: mdi:string-lights
 switch.babyphone:
   icon: mdi:webcam
+switch.heat_lamp:
+  icon: mdi:heat-wave
 
 # office
 sensor.canon_mx470_series:

@@ -25,3 +25,10 @@
   name: Baum Energy
   unit_prefix: k
   round: 2
+
+# sensor.heat_lamp_power
+- platform: integration
+  source: sensor.heat_lamp_power
+  name: Heizlampe Energy
+  unit_prefix: k
+  round: 2

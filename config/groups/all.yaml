@@ -13,6 +13,7 @@ all_switches:
     - switch.lichterkette
 
     # childrens room
+    - switch.heat_lamp
     - switch.love
 
     # bedroom
