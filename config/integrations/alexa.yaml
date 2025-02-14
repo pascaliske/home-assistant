@@ -102,4 +102,4 @@ cloud:
         name: Box
         display_categories: NETWORK_HARDWARE
       switch.vacation_mode:
-        name: Urlaub 
+        name: Urlaub
