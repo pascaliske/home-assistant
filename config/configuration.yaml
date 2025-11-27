@@ -14,40 +14,40 @@ lovelace:
   mode: yaml
   resources:
     # https://github.com/benct/lovelace-github-entity-row
-    - url: /local/lovelace-github-entity-row/github-entity-row.js?v=1.0.0
+    - url: /local/lovelace-github-entity-row/github-entity-row.js?v=2.2.0
       type: module
     # https://github.com/benct/lovelace-multiple-entity-row
-    - url: /local/lovelace-multiple-entity-row/multiple-entity-row.js?v=4.2.0
+    - url: /local/lovelace-multiple-entity-row/multiple-entity-row.js?v=4.5.1
       type: module
     # https://github.com/cbulock/lovelace-battery-entity
     - url: /local/lovelace-battery-entity/battery-entity.js?v=0.2
       type: module
     # https://github.com/kalkih/mini-graph-card
-    - url: /local/mini-graph-card/mini-graph-card-bundle.js?v=0.10.0
+    - url: /local/mini-graph-card/mini-graph-card-bundle.js?v=0.13.0
       type: module
     # https://github.com/thomasloven/lovelace-card-mod
-    - url: /local/lovelace-card-mod/card-mod.js?v=3.0.12
+    - url: /local/lovelace-card-mod/card-mod.js?v=4.0.0
       type: module
     # https://github.com/thomasloven/lovelace-slider-entity-row
-    - url: /local/lovelace-slider-entity-row/slider-entity-row.js?v=17.1.0
+    - url: /local/lovelace-slider-entity-row/slider-entity-row.js?v=17.5.0
       type: module
     # https://github.com/iantrich/text-divider-row
-    - url: /local/text-divider-row/text-divider-row.js?v=1.4.0
+    - url: /local/text-divider-row/text-divider-row.js?v=1.4.1
       type: module
     # https://github.com/thomasloven/lovelace-layout-card
-    - url: /local/lovelace-layout-card/layout-card.js?v=2.2.3
+    - url: /local/lovelace-layout-card/layout-card.js?v=2.4.7
       type: module
     # https://github.com/bramkragten/swipe-card
-    - url: /local/swipe-card/dist/swipe-card.js?v=4.0.0
+    - url: /local/swipe-card/dist/swipe-card.js?v=5.0.0
       type: module
     # https://github.com/AitorDB/home-assistant-sun-card
     - url: /local/home-assistant-sun-card/home-assistant-sun-card.js?v=0.1.4
       type: module
     # https://github.com/bokub/rgb-light-card
-    - url: /local/rgb-light-card/card.js?v=1.9.0
+    - url: /local/rgb-light-card/card.js?v=1.13.0
       type: module
 
 # additionally set card-mod as frontend module for performance optimizations
 frontend:
   extra_module_url:
-    - /local/lovelace-card-mod/card-mod.js?v=3.0.12
+    - /local/lovelace-card-mod/card-mod.js?v=4.0.0
