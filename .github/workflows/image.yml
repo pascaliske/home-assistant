@@ -19,7 +19,7 @@ jobs:
       PLATFORMS: linux/amd64,linux/arm/v7,linux/arm64
     steps:
       # checkout
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       # setup qemu
       - uses: docker/setup-qemu-action@v3
