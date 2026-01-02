@@ -1,9 +1,6 @@
 http:
   server_host: 0.0.0.0
   trusted_proxies:
+    - !secret network_local
     - !secret network_cluster
-    - !secret ip_tailscale_coruscant
-    - !secret ip_tailscale_dathomir
-    - !secret ip_tailscale_mustafar
-    - !secret ip_tailscale_jakku
   use_x_forwarded_for: true
