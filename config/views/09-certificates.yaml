@@ -35,14 +35,14 @@ cards:
                   name: homeassistant.iske.cloud
                 - entity: sensor.cert_expiry_loki_iske_cloud
                   name: loki.iske.cloud
+                - entity: sensor.cert_expiry_pass_iske_cloud
+                  name: pass.iske.cloud
                 - entity: sensor.cert_expiry_prometheus_iske_cloud
                   name: prometheus.iske.cloud
                 - entity: sensor.cert_expiry_traefik_iske_cloud
                   name: traefik.iske.cloud
                 - entity: sensor.cert_expiry_unifi_iske_cloud
                   name: unifi.iske.cloud
-                - entity: sensor.cert_expiry_vault_iske_cloud
-                  name: vault.iske.cloud
                 - type: custom:text-divider-row
                   entity: sensor.time
                   text: Public

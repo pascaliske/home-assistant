@@ -159,6 +159,14 @@
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_loki_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
+    # pass.iske.cloud
+    - name: cert_expiry_pass_iske_cloud
+      unit_of_measurement: Days
+      icon: mdi:certificate
+      state: >
+        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_pass_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
+        {{ (diff / 60 / 1440) | round(0) }}
+
     # prometheus.iske.cloud
     - name: cert_expiry_prometheus_iske_cloud
       unit_of_measurement: Days
@@ -181,14 +189,6 @@
       icon: mdi:certificate
       state: >
         {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_unifi_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
-        {{ (diff / 60 / 1440) | round(0) }}
-
-    # vault.iske.cloud
-    - name: cert_expiry_vault_iske_cloud
-      unit_of_measurement: Days
-      icon: mdi:certificate
-      state: >
-        {% set diff = as_timestamp(states('sensor.cert_expiry_timestamp_vault_iske_cloud'), as_timestamp(now())) - as_timestamp(now()) | int %}
         {{ (diff / 60 / 1440) | round(0) }}
 
     # tonies.me
