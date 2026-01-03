@@ -1,0 +1,14 @@
+- switch:
+    - name: Synology NAS
+      state: "{{ not is_state('sensor.synologynas_temperature', 'unavailable') }}"
+      default_entity_id: switch.synology_nas
+      icon: mdi:nas
+      turn_on:
+        - action: wake_on_lan.send_magic_packet
+          data:
+            mac: 00:11:32:f3:dd:cf
+      turn_off:
+        - action: button.press
+          target:
+            entity_id:
+              - button.ryloth_shutdown
