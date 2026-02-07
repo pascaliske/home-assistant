@@ -4,10 +4,10 @@ config/*
 # track statically created files
 !config/configuration.yaml
 !config/customize.yaml
-!config/ui-lovelace.yaml
 
 # track statically created folders
 !config/automations
+!config/dashboards
 !config/groups
 !config/helpers
 !config/integrations
@@ -17,7 +17,6 @@ config/*
 !config/switches
 !config/templates
 !config/themes
-!config/views
 !config/www
 
 # misc

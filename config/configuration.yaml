@@ -11,7 +11,7 @@ homeassistant:
       allow_bypass_login: true
     - type: homeassistant
 lovelace:
-  mode: yaml
+  resource_mode: yaml
   resources:
     # https://github.com/benct/lovelace-github-entity-row
     - url: /local/lovelace-github-entity-row/github-entity-row.js?v=2.2.0
@@ -46,6 +46,13 @@ lovelace:
     # https://github.com/bokub/rgb-light-card
     - url: /local/rgb-light-card/card.js?v=1.13.0
       type: module
+  dashboards:
+    lovelace:
+      mode: yaml
+      filename: dashboards/01-overview.yaml
+      title: Overview
+      icon: mdi:view-dashboard
+      show_in_sidebar: true
 
 # additionally set card-mod as frontend module for performance optimizations
 frontend:
