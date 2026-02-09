@@ -37,10 +37,10 @@ tasks:
     cmds:
       - mv config/automations/battery-check.yaml{,.disabled}
       - mv config/automations/bedroom-mini-switch.yaml{,.disabled}
-      - mv config/automations/love-mini-switch.yaml{,.disabled}
+      - mv config/automations/childrens-room-mini-switch.yaml{,.disabled}
       - mv config/automations/office-mini-switch.yaml{,.disabled}
     status:
       - test -f config/automations/battery-check.yaml.disabled
       - test -f config/automations/bedroom-mini-switch.yaml.disabled
-      - test -f config/automations/love-mini-switch.yaml.disabled
+      - test -f config/automations/childrens-room-mini-switch.yaml.disabled
       - test -f config/automations/office-mini-switch.yaml.disabled
