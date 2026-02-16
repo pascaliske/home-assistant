@@ -83,7 +83,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       # scan image
-      - uses: crazy-max/ghaction-container-scan@v3
+      - uses: crazy-max/ghaction-container-scan@v4
         if: github.event_name != 'pull_request'
         id: scan
         with:
