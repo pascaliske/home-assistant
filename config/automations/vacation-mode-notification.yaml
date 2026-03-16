@@ -4,6 +4,7 @@ triggers:
   entity_id:
     - binary_sensor.hallway_entrance_door_lumi_contact
     - binary_sensor.kitchen_balcony_door_lumi_contact
+    - binary_sensor.bathroom_window_lumi_contact
     - binary_sensor.guest_bathroom_window_lumi_contact
   from: 'off'
   to: 'on'

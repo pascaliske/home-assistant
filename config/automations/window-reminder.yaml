@@ -2,6 +2,7 @@ alias: Window Close Reminder
 triggers:
   platform: state
   entity_id:
+    - binary_sensor.bathroom_window_lumi_contact
     - binary_sensor.guest_bathroom_window_lumi_contact
   to: 'on'
   for:

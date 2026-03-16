@@ -473,6 +473,17 @@ cards:
                 show_header_toggle: true
               entities:
                 - type: custom:multiple-entity-row
+                  entity: binary_sensor.bathroom_window_lumi_contact
+                  name: Window
+                  icon: mdi:window-closed
+                  secondary_info: last-changed
+                  show_state: false
+                  entities:
+                    - entity: binary_sensor.bathroom_window_lumi_contact
+                      name: State
+                    - entity: sensor.bathroom_window_lumi_power
+                      name: Battery
+                - type: custom:multiple-entity-row
                   entity: sensor.bathroom_climate_lumi_temperature
                   name: Climate
                   secondary_info: last-changed
