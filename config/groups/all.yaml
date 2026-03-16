@@ -4,7 +4,7 @@ all_switches:
   all: yes
   entities:
     # living room
-    - switch.baum
+    - switch.licht
     - switch.lampe
     - switch.kugel
     - switch.lichterkette_wohnzimmer

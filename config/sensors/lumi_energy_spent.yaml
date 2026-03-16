@@ -19,10 +19,10 @@
   unit_prefix: k
   round: 2
 
-# sensor.baum_power
+# sensor.licht_power
 - platform: integration
-  source: sensor.baum_power
-  name: Baum Energy
+  source: sensor.licht_power
+  name: Licht Energy
   unit_prefix: k
   round: 2
 

@@ -50,18 +50,18 @@ cards:
                     - entity: sensor.lampe_power
                       name: false
                 - type: custom:multiple-entity-row
+                  entity: switch.licht
+                  secondary_info: last-changed
+                  toggle: true
+                  entities:
+                    - entity: sensor.licht_power
+                      name: false
+                - type: custom:multiple-entity-row
                   entity: switch.lichterkette_wohnzimmer
                   secondary_info: last-changed
                   toggle: true
                   entities:
                     - entity: sensor.lichterkette_wohnzimmer_power
-                      name: false
-                - type: custom:multiple-entity-row
-                  entity: switch.baum
-                  secondary_info: last-changed
-                  toggle: true
-                  entities:
-                    - entity: sensor.baum_power
                       name: false
                 - type: custom:multiple-entity-row
                   entity: switch.kugel

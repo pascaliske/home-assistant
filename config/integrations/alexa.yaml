@@ -14,7 +14,7 @@ cloud:
         - light.bedroom_closet
 
         # switches
-        - switch.baum
+        - switch.licht
         - switch.heat_lamp
         - switch.lampe
         - switch.lichterkette_kueche
@@ -72,8 +72,8 @@ cloud:
         display_categories: LIGHT
 
       # switches
-      switch.baum:
-        name: Baum
+      switch.licht:
+        name: Licht
         display_categories: LIGHT
       switch.lampe:
         name: Lampe

@@ -1,6 +1,6 @@
 # living room
-switch.baum:
-  icon: mdi:string-lights
+switch.licht:
+  icon: mdi:lightbulb
 switch.lichterkette_wohnzimmer:
   icon: mdi:string-lights
 switch.lampe:
