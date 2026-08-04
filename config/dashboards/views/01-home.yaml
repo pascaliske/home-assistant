@@ -519,6 +519,18 @@ cards:
                       name: State
                     - entity: sensor.guest_bathroom_window_lumi_power
                       name: Battery
+                - type: custom:multiple-entity-row
+                  entity: sensor.guest_bathroom_climate_lumi_temperature
+                  name: Climate
+                  secondary_info: last-changed
+                  show_state: false
+                  entities:
+                    - entity: sensor.guest_bathroom_climate_lumi_temperature
+                      name: Temperature
+                    - entity: sensor.guest_bathroom_climate_lumi_humidity
+                      name: Humidity
+                    - entity: sensor.guest_bathroom_climate_lumi_power
+                      name: Battery
     card_mod:
       style: |
         ha-card {
