@@ -1,5 +1,0 @@
-http:
-  trusted_proxies:
-    - !secret network_local
-    - !secret network_cluster
-  use_x_forwarded_for: true
