@@ -6,10 +6,5 @@
   "git-submodules": {
     "enabled": true
   },
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["commitlint"],
-      "groupName": "commitlint"
-    }
-  ]
+  "packageRules": []
 }
