@@ -19,9 +19,6 @@ lovelace:
     # https://github.com/benct/lovelace-multiple-entity-row
     - url: /local/lovelace-multiple-entity-row/multiple-entity-row.js?v=4.5.1
       type: module
-    # https://github.com/cbulock/lovelace-battery-entity
-    - url: /local/lovelace-battery-entity/battery-entity.js?v=0.2
-      type: module
     # https://github.com/kalkih/mini-graph-card
     - url: /local/mini-graph-card/mini-graph-card-bundle.js?v=0.13.0
       type: module

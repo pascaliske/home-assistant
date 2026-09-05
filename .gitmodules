@@ -10,9 +10,6 @@
 [submodule "config/www/swipe-card"]
     path = config/www/swipe-card
     url = https://github.com/bramkragten/swipe-card
-[submodule "config/www/lovelace-battery-entity"]
-    path = config/www/lovelace-battery-entity
-    url = https://github.com/cbulock/lovelace-battery-entity
 [submodule "config/www/lovelace-card-mod"]
     path = config/www/lovelace-card-mod
     url = https://github.com/thomasloven/lovelace-card-mod
