@@ -23,7 +23,7 @@ lovelace:
     - url: /local/mini-graph-card/mini-graph-card-bundle.js?v=0.13.0
       type: module
     # https://github.com/thomasloven/lovelace-card-mod
-    - url: /local/lovelace-card-mod/card-mod.js?v=4.0.0
+    - url: /local/lovelace-card-mod/card-mod.js?v=4.2.1
       type: module
     # https://github.com/thomasloven/lovelace-slider-entity-row
     - url: /local/lovelace-slider-entity-row/slider-entity-row.js?v=17.5.0
@@ -41,7 +41,7 @@ lovelace:
     - url: /local/home-assistant-sun-card/home-assistant-sun-card.js?v=0.1.4
       type: module
     # https://github.com/bokub/rgb-light-card
-    - url: /local/rgb-light-card/card.js?v=1.13.0
+    - url: /local/rgb-light-card/card.js?v=1.14.0
       type: module
   dashboards:
     lovelace:
@@ -54,4 +54,4 @@ lovelace:
 # additionally set card-mod as frontend module for performance optimizations
 frontend:
   extra_module_url:
-    - /local/lovelace-card-mod/card-mod.js?v=4.0.0
+    - /local/lovelace-card-mod/card-mod.js?v=4.2.1
